@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/qunit/git/qunit.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="http://code.jquery.com/qunit/git/qunit.js"></script>
+  <script type="text/javascript" src="http://jashkenas.github.com/coffee-script/extras/coffee-script.js"></script>
+</head>
+<body>
+  <h1 id="qunit-header">Unit testes in CoffeeScript</h1>
+ <h2 id="qunit-banner"></h2>
+ <div id="qunit-testrunner-toolbar"></div>
+ <h2 id="qunit-userAgent"></h2>
+ <ol id="qunit-tests"></ol>
+ <div id="qunit-fixture">test markup, will be hidden</div>
+
+<script type="text/coffeescript">
+## Codigo
+class Player
+  constructor: ()->  
+    @score = 0
+
+
+class Game
+  constructor: (player1, player2)-> 
+    @duece = false
+    @player1 = player1
+    @player2 = player2
+    @player1.score = 0
+    @player2.score = 0
+
+  score: (player)->
+
+    if(player.score < 30)
+      player.score += 15
+    else if(player.score < 40)
+      player.score += 10
+
+    if(player1.score == player)
+
+
+
+
+
+## Teste
+
+  $(()->
+    module("Game")
+    test("Start player", ()-> equal(new Player().score, 0, "Quando um player eh criado, seu placar comeca com 0"))
+    player1 = new Player()
+    player2 = new Player()
+    game = new Game(player1,player2)
+    
+    test("Start game", ()-> equal(player1.score,player2.score, "Quando o jogo comeca o placar comeca igual"))
+
+    player11 = new Player()
+    player12 = new Player()
+    game1 = new Game(player11,player12)
+    game1.score(player11)
+
+    test("Primeiro ponto", ()-> equal(player11.score,15, "No primeiro ponto o jogador deve ter 15 pontos"))
+
+
+    test("Segundo ponto", ()-> 
+      game1.score(player11)
+      equal(player11.score,30, "No segundo ponto o jogador deve ter 30 pontos"))
+    
+    test("Terceiro ponto", ()-> 
+      game1.score(player11)
+      equal(player11.score,40, "No terceiro ponto o jogador deve ter 0 pontos"))
+
+
+  );
+
+ 
+</script>
+</body>
+</html>
