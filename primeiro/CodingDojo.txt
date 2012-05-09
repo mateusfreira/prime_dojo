@@ -1,0 +1,19 @@
+
+	Coding Dojo - Prime Systems - 04/05/2012
+
+
+** O que aprendemos?
+
+	- Precisamos conhecer melhor nosso ambiente de desenvolvimento/teste
+	- Tivemos dificuldade em codificar numa linguagem nova.
+
+
+** Prós:
+	- Fizemos a reunião "no peito e na raça"
+	- Conseguimos avançar bastante para um primeiro encontro.
+
+
+** Contras:
+
+	- Turma não controlou a ansiedade em palpitar durante a codificação dos pares
+	- Não respeitamos o timebox do Randori Kata.
